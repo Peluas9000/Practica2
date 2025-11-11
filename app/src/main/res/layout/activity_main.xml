@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
     <TextView
-        android:id="@+id/nombre"
+        android:id="@+id/nombreTextView"
         android:layout_width="114dp"
         android:layout_height="33dp"
         android:text="Ayoub"
@@ -20,7 +20,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/biografia"
+        android:id="@+id/biografiaTextView"
         android:layout_width="315dp"
         android:layout_height="60dp"
         android:text="Hola me llamo Ayoub y soy un joven apasionado con la tecnologia que busca aprender y mejora constante "
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.348" />
 
     <Button
-        android:id="@+id/editarPerfil"
+        android:id="@+id/botonEditar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Editar Perfil"
@@ -41,7 +41,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/compartirBiografia"
+        android:id="@+id/botonCompartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Compartir Biografia"
