@@ -2,8 +2,11 @@ package com.example.practica2
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,6 +15,10 @@ import org.w3c.dom.Text
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val nombreGet=intent.getStringExtra("nombre")
+        val bioGet=intent.getStringExtra("biografia")
+        val imagen=findViewById<ImageView>(R.id.imageView2)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -23,7 +30,7 @@ class MainActivity2 : AppCompatActivity() {
         val  nombre = findViewById<TextView>(R.id.nombreTextView)
         val biografia = findViewById<TextView>(R.id.biografiaTextView)
 
-            biografia.text="Joevn de 20 años apasionado con la programacion"
+
 
         val botonEditar=findViewById<Button>(R.id.botonEditar)
         val botonCompartir=findViewById<Button>(R.id.botonCompartir)
@@ -45,6 +52,19 @@ class MainActivity2 : AppCompatActivity() {
 
             startActivity(Intent.createChooser(shareIntent,"Compartir biografia con "))
         }
+
+
+        if(!nombreGet.isNullOrEmpty() && !bioGet.isNullOrEmpty()){
+            val nombreMain=findViewById<TextView>(R.id.nombreTextView)
+            val bioMain=findViewById<TextView>(R.id.biografiaTextView)
+
+            nombreMain.setText(nombreGet)
+            bioMain.setText(bioGet)
+
+        }
+
+
+        //imagen.visibility = View.VISIBLE
 
 
     }
